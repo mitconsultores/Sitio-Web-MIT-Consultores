@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Cormorant Garamond", ui-serif, Georgia, serif,
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-white dark:bg-gray-950 font-sans;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
 }

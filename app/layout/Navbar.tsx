@@ -63,15 +63,15 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className="text-[#f6EDE3] hover:text-[#998B6D] font-medium transition-colors"
+            <Link
+              to="/"
+              className="text-[#f6EDE3] hover:text-[#998B6D] font-serif font-medium transition-colors"
             >
               Inicio
             </Link>
-            <Link 
-              to="/nosotros" 
-              className="text-[#f6EDE3] hover:text-[#998B6D] font-medium transition-colors"
+            <Link
+              to="/nosotros"
+              className="text-[#f6EDE3] hover:text-[#998B6D] font-serif font-medium transition-colors"
             >
               Nosotros
             </Link>
@@ -82,8 +82,8 @@ export function Navbar() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <button 
-                className="text-[#f6EDE3] hover:text-[#998B6D] font-medium transition-colors duration-200 flex items-center gap-1"
+              <button
+                className="text-[#f6EDE3] hover:text-[#998B6D] font-serif font-medium transition-colors duration-200 flex items-center gap-1"
               >
                 Servicios
                 <svg 
@@ -105,30 +105,30 @@ export function Navbar() {
                     : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}
               >
-                <Link 
-                  to="/servicios/corporativo" 
-                  className="block px-4 py-3 text-[#f6EDE3] hover:text-[#998B6D] hover:bg-[#171b0b]/60 transition-colors duration-200"
+                <Link
+                  to="/servicios/corporativo"
+                  className="block px-4 py-3 text-[#f6EDE3] hover:text-[#998B6D] hover:bg-[#171b0b]/60 font-serif transition-colors duration-200"
                 >
                   Derecho Corporativo
                 </Link>
-                <Link 
-                  to="/servicios/propiedad-intelectual" 
-                  className="block px-4 py-3 text-[#f6EDE3] hover:text-[#998B6D] hover:bg-[#171b0b]/60 transition-colors duration-200"
+                <Link
+                  to="/servicios/propiedad-intelectual"
+                  className="block px-4 py-3 text-[#f6EDE3] hover:text-[#998B6D] hover:bg-[#171b0b]/60 font-serif transition-colors duration-200"
                 >
                   Propiedad Intelectual
                 </Link>
-                <Link 
-                  to="/servicios/migratorio" 
-                  className="block px-4 py-3 text-[#f6EDE3] hover:text-[#998B6D] hover:bg-[#171b0b]/60 transition-colors duration-200"
+                <Link
+                  to="/servicios/migratorio"
+                  className="block px-4 py-3 text-[#f6EDE3] hover:text-[#998B6D] hover:bg-[#171b0b]/60 font-serif transition-colors duration-200"
                 >
                   Derecho Migratorio
                 </Link>
               </div>
             </div>
 
-            <Link 
-              to="/contacto" 
-              className="text-[#f6EDE3] hover:text-[#998B6D] font-medium transition-colors"
+            <Link
+              to="/contacto"
+              className="text-[#f6EDE3] hover:text-[#998B6D] font-serif font-medium transition-colors"
             >
               Contacto
             </Link>
@@ -172,16 +172,16 @@ export function Navbar() {
         }`}
       >
         <div className="px-4 pt-2 pb-4 space-y-2">
-            <Link 
-              to="/" 
-              className="block py-2 text-[#57512F] hover:text-[#998B6D] font-medium transition-colors duration-200"
+            <Link
+              to="/"
+              className="block py-2 text-[#57512F] hover:text-[#998B6D] font-serif font-medium transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               Inicio
             </Link>
-            <Link 
-              to="/nosotros" 
-              className="block py-2 text-[#57512F] hover:text-[#998B6D] font-medium transition-colors duration-200"
+            <Link
+              to="/nosotros"
+              className="block py-2 text-[#57512F] hover:text-[#998B6D] font-serif font-medium transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               Nosotros
@@ -189,9 +189,9 @@ export function Navbar() {
             
             {/* Mobile Servicios */}
             <div>
-              <button 
+              <button
                 onClick={() => setIsServiciosOpen(!isServiciosOpen)}
-                className="w-full text-left py-2 text-[#57512F] hover:text-[#998B6D] font-medium flex items-center justify-between transition-colors duration-200"
+                className="w-full text-left py-2 text-[#57512F] hover:text-[#998B6D] font-serif font-medium flex items-center justify-between transition-colors duration-200"
               >
                 Servicios
                 <svg 
@@ -209,23 +209,23 @@ export function Navbar() {
                 }`}
               >
                 <div className="pl-4 space-y-2 mt-2">
-                  <Link 
-                    to="/servicios/corporativo" 
-                    className="block py-2 text-[#666472] hover:text-[#57512F] transition-colors duration-200"
+                  <Link
+                    to="/servicios/corporativo"
+                    className="block py-2 text-[#666472] hover:text-[#57512F] font-serif transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     Derecho Corporativo
                   </Link>
-                  <Link 
-                    to="/servicios/propiedad-intelectual" 
-                    className="block py-2 text-[#666472] hover:text-[#57512F] transition-colors duration-200"
+                  <Link
+                    to="/servicios/propiedad-intelectual"
+                    className="block py-2 text-[#666472] hover:text-[#57512F] font-serif transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     Propiedad Intelectual
                   </Link>
-                  <Link 
-                    to="/servicios/migratorio" 
-                    className="block py-2 text-[#666472] hover:text-[#57512F] transition-colors duration-200"
+                  <Link
+                    to="/servicios/migratorio"
+                    className="block py-2 text-[#666472] hover:text-[#57512F] font-serif transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     Derecho Migratorio
@@ -234,9 +234,9 @@ export function Navbar() {
               </div>
             </div>
 
-            <Link 
-              to="/contacto" 
-              className="block py-2 text-[#57512F] hover:text-[#998B6D] font-medium transition-colors duration-200"
+            <Link
+              to="/contacto"
+              className="block py-2 text-[#57512F] hover:text-[#998B6D] font-serif font-medium transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               Contacto

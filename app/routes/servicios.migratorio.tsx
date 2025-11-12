@@ -1,4 +1,4 @@
-import { HeroMigratorio, ContentMigratorio } from "~/components/servicios";
+import { HeroMigratorio, ContentMigratorio, CardsMigratorio, ProcessMigratorio, CTAMigratorio } from "~/components/servicios";
 
 export function meta() {
   return [
@@ -11,7 +11,10 @@ export default function MigratorioPage() {
   return (
     <div>
       <HeroMigratorio />
+      <CardsMigratorio />
       <ContentMigratorio />
+      <ProcessMigratorio />
+      <CTAMigratorio />
     </div>
   );
 }

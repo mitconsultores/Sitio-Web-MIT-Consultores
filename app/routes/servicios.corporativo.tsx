@@ -1,4 +1,4 @@
-import { HeroCorporativo, ContentCorporativo } from "~/components/servicios";
+import { HeroCorporativo, ContentCorporativo, CardsCorporativo, CTACorporativo } from "~/components/servicios";
 
 export function meta() {
   return [
@@ -11,7 +11,9 @@ export default function CorporativoPage() {
   return (
     <div>
       <HeroCorporativo />
+      <CardsCorporativo />
       <ContentCorporativo />
+      <CTACorporativo />
     </div>
   );
 }
