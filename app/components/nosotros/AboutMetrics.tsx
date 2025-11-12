@@ -2,7 +2,7 @@ import { Button } from "~/ui/button";
 
 export function AboutMetrics() {
   return (
-    <section className="py-32 bg-gradient-to-br from-[#F6EDE3] to-white">
+    <section className="py-32 bg-[#f6EDE3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Metrics Section */}
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">

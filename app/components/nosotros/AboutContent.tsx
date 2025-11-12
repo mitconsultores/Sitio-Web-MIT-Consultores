@@ -1,6 +1,6 @@
 export function AboutContent() {
   return (
-    <section className="py-20 bg-gradient-to-br from-[#F6EDE3] to-white">
+    <section className="py-20 bg-[#F6EDE3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
@@ -24,21 +24,21 @@ export function AboutContent() {
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2">
               <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" 
+                src="/about-imgs/about-1.webp" 
                 alt="Oficina moderna"
-                className="w-full h-64 object-cover rounded-lg shadow-lg"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
               />
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80" 
+                src="/about-imgs/about-2.webp" 
                 alt="Trabajo en equipo"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&q=80" 
+                src="/about-imgs/about-3.webp" 
                 alt="Consultoría legal"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />

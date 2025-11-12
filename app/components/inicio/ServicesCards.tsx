@@ -17,7 +17,7 @@ const services: Service[] = [
     title: "Derecho Corporativo",
     description:
       "Constitución empresarial, gobierno corporativo, contratos, M&A, compliance y recursos humanos.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    image: "/home-imgs/derecho-corporativo.webp",
     icon: <FaBuilding className="size-6" />,
     link: "/servicios/corporativo",
   },
@@ -26,7 +26,7 @@ const services: Service[] = [
     title: "Propiedad Intelectual",
     description:
       "Protección de marcas, patentes, derechos de autor y asesoría en tecnología.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+    image: "/home-imgs/propiedad-intelectual.webp",
     icon: <FaCopyright className="size-6" />,
     link: "/servicios/propiedad-intelectual",
   },
@@ -35,7 +35,7 @@ const services: Service[] = [
     title: "Derecho Migratorio",
     description:
       "Visas, residencias, permisos de trabajo, regularización y naturalización mexicana.",
-    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80",
+    image: "/home-imgs/derecho-migratorio.webp",
     icon: <FaPassport className="size-6" />,
     link: "/servicios/migratorio",
   },

@@ -5,7 +5,7 @@ export function HeroPropiedadIntelectual() {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')"
+          backgroundImage: "url('/services-imgs/HeroPropiedadIntelectual.webp')"
         }}
       >
         {/* Overlay */}

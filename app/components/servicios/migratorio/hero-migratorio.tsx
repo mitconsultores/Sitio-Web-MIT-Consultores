@@ -5,7 +5,7 @@ export function HeroMigratorio() {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=80')"
+          backgroundImage: "url('/services-imgs/HeroDerechoMigratorio.webp')"
         }}
       >
         {/* Overlay */}

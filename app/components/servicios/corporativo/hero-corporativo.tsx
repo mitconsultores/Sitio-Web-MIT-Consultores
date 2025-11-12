@@ -5,7 +5,7 @@ export function HeroCorporativo() {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80')"
+          backgroundImage: "url('/services-imgs/HeroDerechoCorporativo.webp')"
         }}
       >
         {/* Overlay */}
