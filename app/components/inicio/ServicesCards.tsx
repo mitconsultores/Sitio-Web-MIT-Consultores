@@ -43,8 +43,8 @@ const services: Service[] = [
 
 export function ServicesCards() {
   return (
-    <section className="py-12 lg:py-32 px-6 bg-[#f6EDE3]">
-      <div className="container flex flex-col gap-16 lg:px-16">
+    <section className=" py-12 lg:py-32 px-6 bg-[#f6EDE3]">
+      <div className="container mx-auto flex flex-col gap-16 lg:px-16">
         <div className="lg:max-w-sm">
           <h2 className="mb-3 text-xl font-semibold md:mb-4 md:text-4xl lg:mb-6 text-[#171b0b]">
             Nuestros Servicios
