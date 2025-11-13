@@ -1,9 +1,9 @@
-import { AboutHero, AboutContent, AboutMetrics } from "~/components/nosotros";
+import { AboutHero, AboutContent, AboutMetrics, TeamSection } from "~/components/nosotros";
 
 export function meta() {
   return [
-    { title: "Nosotros - MIT Consultores" },
-    { name: "description", content: "Un distinguido despacho jurídico ubicado en el corazón de la Ciudad de México" },
+    { title: "Nosotros | MIT Consultores - Quiénes Somos" },
+    { name: "description", content: "Conoce a MIT Consultores, despacho jurídico especializado en CDMX con experiencia en derecho corporativo, migratorio e intelectual. Nuestro equipo de abogados profesionales." },
   ];
 }
 
@@ -12,6 +12,7 @@ export default function NosotrosPage() {
     <>
       <AboutHero />
       <AboutContent />
+      <TeamSection />
       <AboutMetrics />
     </>
   );

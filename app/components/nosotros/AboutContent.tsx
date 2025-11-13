@@ -7,7 +7,7 @@ export function AboutContent() {
           {/* Left Side - Text */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#171b0b] mb-6 leading-tight">
-              Un Distinguido Despacho Jurídico en el Corazón de la Ciudad de México
+              Tu Socio Legal Estratégico
             </h2>
             <p className="text-lg text-[#666472] leading-relaxed mb-6 text-justify">
               MIT Consultores es un distinguido despacho jurídico boutique ubicado en el corazón de la Ciudad de México. Especializado en derecho corporativo, migratorio y propiedad intelectual, brindamos a nuestros clientes servicios legales de primera calidad adaptados a sus necesidades específicas.

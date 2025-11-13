@@ -7,11 +7,12 @@ export function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80')"
+          backgroundImage: "url('/home-imgs/hero-bg.jpg')"
         }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-[#171b0b]/20" />
       </div>
 
       {/* Content */}
@@ -27,7 +28,7 @@ export function Hero() {
             <Button variant="primary" href="/contacto">
               Contactar
             </Button>
-            <Button variant="secondary" href="/nosotros">
+            <Button variant="secondary" href="/nosotros" className="border-2 border-[#f6EDE3] text-[#f6EDE3] hover:bg-[#f6EDE3] hover:text-[#171b0b]">
               Conocer más
             </Button>
           </div>

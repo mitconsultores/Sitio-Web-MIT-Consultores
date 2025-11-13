@@ -2,8 +2,8 @@ import { Link } from "react-router";
 
 export function meta() {
   return [
-    { title: "Servicios - MIT Consultores" },
-    { name: "description", content: "Servicios legales especializados en derecho corporativo, propiedad intelectual y derecho migratorio" },
+    { title: "Servicios Legales | MIT Consultores" },
+    { name: "description", content: "Servicios legales especializados en derecho corporativo, propiedad intelectual y derecho migratorio. Soluciones jurídicas a medida para empresas y personas en México." },
   ];
 }
 

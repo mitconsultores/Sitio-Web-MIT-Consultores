@@ -2,8 +2,8 @@ import { HeroCorporativo, ContentCorporativo, CardsCorporativo, CTACorporativo }
 
 export function meta() {
   return [
-    { title: "Derecho Corporativo - MIT Consultores" },
-    { name: "description", content: "Soluciones integrales para la estructura, gobierno y operación de su empresa" },
+    { title: "Derecho Corporativo | MIT Consultores" },
+    { name: "description", content: "Asesoría integral en derecho corporativo: estructura legal, gobierno empresarial y operación. MIT Consultores especializada en soluciones legales para empresas en México." },
   ];
 }
 

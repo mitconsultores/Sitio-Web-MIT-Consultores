@@ -2,8 +2,8 @@ import { Hero, ServicesCards, HomeAbout, HomeCTA } from "~/components/inicio";
 
 export function meta() {
   return [
-    { title: "Inicio - MIT Consultores" },
-    { name: "description", content: "Despacho jurídico especializado en derecho corporativo, migratorio y propiedad intelectual" },
+    { title: "MIT Consultores | Despacho Jurídico Especializado" },
+    { name: "description", content: "Despacho jurídico en México especializado en derecho corporativo, migratorio y propiedad intelectual. Asesoría legal profesional para empresas y personas." },
   ];
 }
 

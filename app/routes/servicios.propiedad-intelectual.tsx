@@ -2,8 +2,8 @@ import { HeroPropiedadIntelectual, ContentPropiedadIntelectual, CardsPropiedadIn
 
 export function meta() {
   return [
-    { title: "Propiedad Intelectual - MIT Consultores" },
-    { name: "description", content: "Protección integral de sus activos intangibles y derechos de propiedad intelectual" },
+    { title: "Propiedad Intelectual | MIT Consultores" },
+    { name: "description", content: "Protección de derechos de propiedad intelectual: marcas, patentes, derechos de autor. MIT Consultores protege tus activos intangibles con asesoría legal especializada en México." },
   ];
 }
 
