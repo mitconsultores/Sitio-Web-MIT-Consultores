@@ -7,7 +7,7 @@ export function HomeAbout() {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80')"
+          backgroundImage: "url('/home-imgs/nosotros2.jpg')"
         }}
       >
         {/* Overlay */}
@@ -21,7 +21,7 @@ export function HomeAbout() {
           <div className="order-2 lg:order-1">
             <div className="relative overflow-hidden rounded-xl shadow-xl">
               <img
-                src="/home-imgs/nosotros.webp"
+                src="/home-imgs/nosotros1.jpg"
                 alt="Despacho jurídico MIT Consultores"
                 className="w-full h-[400px] lg:h-[500px] object-cover transition-transform duration-500 hover:scale-105"
               />
