@@ -1,6 +1,86 @@
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router";
+import { Button } from "~/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Bloquear scroll cuando el modal está abierto
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isModalOpen]);
+
+  // Cerrar modal al hacer click fuera
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (modalRef.current && e.target === modalRef.current) {
+      closeModal();
+    }
+  };
+
+  const privacyNoticeContent = `
+AVISO DE PRIVACIDAD
+
+Última actualización: ${new Date().toLocaleDateString('es-ES')}
+
+MIT Consultores, con domicilio en [Dirección del despacho], es responsable del tratamiento de sus datos personales conforme a lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).
+
+FINALIDADES DEL TRATAMIENTO DE DATOS
+
+Sus datos personales serán utilizados para las siguientes finalidades:
+- Brindar servicios legales y de consultoría
+- Gestionar comunicaciones relacionadas con nuestros servicios
+- Cumplir con obligaciones legales y regulatorias
+- Mejorar nuestros servicios
+
+DATOS PERSONALES QUE RECABAMOS
+
+Podemos recabar los siguientes datos personales:
+- Nombre completo
+- Información de contacto (correo electrónico, teléfono)
+- Información profesional y empresarial
+- Datos necesarios para la prestación de servicios legales
+
+DERECHOS ARCO
+
+Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al tratamiento de sus datos personales (Derechos ARCO). Para ejercer estos derechos, puede contactarnos a través de nuestro formulario de contacto o enviando un correo electrónico a [correo electrónico].
+
+TRANSFERENCIA DE DATOS
+
+Sus datos personales podrán ser transferidos a terceros únicamente cuando sea necesario para la prestación de nuestros servicios legales, con su consentimiento expreso cuando sea requerido por la ley.
+
+MEDIDAS DE SEGURIDAD
+
+Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger sus datos personales contra daño, pérdida, alteración, destrucción o acceso no autorizado.
+
+CAMBIOS AL AVISO DE PRIVACIDAD
+
+Nos reservamos el derecho de modificar este aviso de privacidad en cualquier momento. Los cambios serán publicados en nuestro sitio web.
+
+CONTACTO
+
+Para cualquier duda o comentario sobre este aviso de privacidad, puede contactarnos a través de:
+- Sitio web: www.mitconsultores.com
+- Correo electrónico: [correo electrónico]
+- Teléfono: [número de teléfono]
+  `;
+
   return (
     <footer className="bg-[#171b0b] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -38,8 +118,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/contacto" 
+                <Link
+                  to="/contacto"
                   className="text-white hover:text-[#F6EDE3] transition-colors text-sm"
                 >
                   Contacto
@@ -79,42 +159,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Button */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-[#F6EDE3]">Contacto</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span className="text-white">
-                  Av. Pdte. Masaryk Int.201, Polanco, Polanco II Secc, Miguel Hidalgo, 11550 Ciudad de México, CDMX
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <a 
-                  href="tel:5552812018" 
-                  className="text-white hover:text-[#F6EDE3] transition-colors"
-                >
-                  55 5281 2018
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <a 
-                  href="mailto:m.islas@aiconsultores.mx" 
-                  className="text-white hover:text-[#F6EDE3] transition-colors"
-                >
-                  m.islas@aiconsultores.mx
-                </a>
-              </li>
-            </ul>
+            <Button href="/contacto" variant="secondary" className="bg-[#f6EDE3] text-[#57462f] hover:bg-[#57462f]/80">
+              Contactanos
+            </Button>
           </div>
         </div>
 
@@ -123,8 +173,147 @@ export function Footer() {
           <p className="text-[#F6EDE3] text-sm">
             © {new Date().getFullYear()} MIT Consultores. Todos los derechos reservados.
           </p>
+          <button
+            type="button"
+            onClick={openModal}
+            className="mt-2 text-[#F6EDE3] text-xs hover:text-white underline transition-colors cursor-pointer"
+          >
+            Aviso de Privacidad
+          </button>
         </div>
       </div>
+
+      {/* Modal del Aviso de Privacidad */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            ref={modalRef}
+            className="fixed inset-0 z-50 flex items-center justify-center px-4"
+            style={{
+              backgroundColor: "rgba(23, 27, 11, 0.7)",
+              backdropFilter: "blur(8px)",
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={handleBackdropClick}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="privacy-modal-title"
+          >
+            <motion.div
+              className="relative max-h-[80vh] w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl"
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.15)",
+                backdropFilter: "blur(20px)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+              }}
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ duration: 0.3, type: "spring", damping: 20 }}
+            >
+              {/* Header */}
+              <div
+                className="flex items-start justify-between px-6 py-4"
+                style={{
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.3)",
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                }}
+              >
+                <div>
+                  <h3
+                    id="privacy-modal-title"
+                    className="text-2xl font-semibold"
+                    style={{ color: "#f6EDE3" }}
+                  >
+                    Aviso de Privacidad
+                  </h3>
+                </div>
+                <motion.button
+                  type="button"
+                  onClick={closeModal}
+                  className="ml-4 inline-flex h-8 w-8 items-center justify-center rounded-full text-2xl font-bold transition-all cursor-pointer"
+                  style={{
+                    color: "#f6EDE3",
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  }}
+                  whileHover={{
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label="Cerrar"
+                >
+                  ×
+                </motion.button>
+              </div>
+
+              {/* Content */}
+              <motion.div
+                className="max-h-[60vh] overflow-y-auto px-6 py-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.15 }}
+              >
+                <div className="space-y-4">
+                  {privacyNoticeContent.split('\n\n').map((section, index) => {
+                    const lines = section.split('\n');
+                    const title = lines[0];
+                    const content = lines.slice(1).join('\n');
+
+                    if (title && content) {
+                      return (
+                        <div key={index}>
+                          <h4
+                            className="text-lg font-semibold mb-2"
+                            style={{ color: "#998B6D" }}
+                          >
+                            {title}
+                          </h4>
+                          <div
+                            className="text-sm leading-relaxed whitespace-pre-line"
+                            style={{ color: "#f6EDE3" }}
+                          >
+                            {content}
+                          </div>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Footer */}
+              <div
+                className="flex justify-end px-6 py-3"
+                style={{
+                  borderTop: "1px solid rgba(255, 255, 255, 0.3)",
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                }}
+              >
+                <motion.button
+                  type="button"
+                  onClick={closeModal}
+                  className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer"
+                  style={{
+                    color: "#f6EDE3",
+                    backgroundColor: "rgba(87, 81, 47, 0.8)",
+                    border: "1px solid rgba(255, 255, 255, 0.3)",
+                  }}
+                  whileHover={{
+                    backgroundColor: "rgba(87, 81, 47, 0.9)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Cerrar
+                </motion.button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </footer>
   );
 }

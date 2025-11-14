@@ -1,4 +1,4 @@
-import { AboutHero, AboutContent, AboutMetrics, TeamSection } from "~/components/nosotros";
+import { AboutHero, AboutContent, TeamSection, AboutCTA } from "~/components/nosotros";
 
 export function meta() {
   return [
@@ -13,7 +13,7 @@ export default function NosotrosPage() {
       <AboutHero />
       <AboutContent />
       <TeamSection />
-      <AboutMetrics />
+      <AboutCTA />
     </>
   );
 }

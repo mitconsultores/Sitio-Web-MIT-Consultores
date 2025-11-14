@@ -45,19 +45,19 @@ B. Alejandra Vaca Rosillo egresada de la Facultad de Derecho de la UNAM y cuenta
   },
   {
     id: 3,
-    name: "Michel Lule",
-    role: "Asistente Legal",
+    name: "Dulce Cortez López",
+    role: "Abogada Junior",
     shortBio:
-      "Estudiante de derecho con conocimientos en derecho corporativo y opiniones sobre empresas comerciales.",
-    fullProfile: `Posición: Asistente Legal
+      "Licenciada en Derecho con experiencia en Derecho Agrario, Civil y Corporativo, especializada en gobierno corporativo y trámites migratorios.",
+    fullProfile: `Posición: Abogada Junior
 
-Educación: Estudiante de Derecho, Facultad de Derecho de la UNAM
+Educación: Licenciada en Derecho, Facultad de Derecho de la UNAM
 
-Experiencia: Conocimientos en derecho corporativo y opiniones de empresas comerciales
+Experiencia: Amplia experiencia en Derecho Agrario, Civil y Corporativo
 
 Antecedentes:
 
-Michel Lule es estudiante de Derecho en la Facultad de Derecho de la UNAM, especializado en derecho corporativo y en opiniones sobre empresas comerciales. Tiene un fuerte interés en el emprendimiento y la cultura empresarial.`,
+Dulce Cortez López es egresada de la Facultad de Derecho de la UNAM con sólida formación jurídica. Cuenta con experiencia en Derecho Agrario, Civil y Corporativo, especializándose en regulación, gobierno corporativo y actividades vinculadas a sociedades mercantiles. Se enfoca en constitución de sociedades, elaboración y revisión de actas, libros corporativos y estatutos sociales, además de trámites migratorios relacionados. Ofrece acompañamiento integral con énfasis en responsabilidad, honestidad, eficacia y compromiso, garantizando atención profesional y oportuna adaptada a las necesidades de cada cliente.`,
   },
   {
     id: 4,

@@ -1,2 +1,3 @@
-export { Contact } from './Contact';
+export { Contact } from './form-contacto';
+export { FAQ } from './faq';
 
