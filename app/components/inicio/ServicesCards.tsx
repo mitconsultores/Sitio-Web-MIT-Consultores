@@ -52,13 +52,6 @@ export function ServicesCards() {
           <p className="mb-8 text-[#666472] lg:text-lg">
             Soluciones jurídicas especializadas para empresas y particulares con atención personalizada y profesional.
           </p>
-          <Link
-            to="/servicios"
-            className="group flex items-center text-xs font-medium md:text-base lg:text-lg text-[#171b0b] hover:text-[#57512F] transition-colors"
-          >
-            Ver todos los servicios
-            <FaArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
-          </Link>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:gap-8">

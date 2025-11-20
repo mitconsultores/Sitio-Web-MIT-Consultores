@@ -29,7 +29,7 @@ export function Contact() {
       </section>
 
       {/* Content Section */}
-      <section className="py-32 bg-gradient-to-br from-[#57462f] to-white">
+      <section className="py-32 bg-[#f6EDE3]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-[#171b0b] to-[#57462f] rounded-xl p-8 shadow-lg">
             <h2 className="text-4xl font-bold text-[#F6EDE3] mb-6 text-center">Envíanos un mensaje</h2>
