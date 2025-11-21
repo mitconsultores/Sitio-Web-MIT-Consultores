@@ -266,7 +266,7 @@ export function TeamSection() {
             aria-labelledby="team-member-modal-title"
           >
             <motion.div
-              className="relative max-h-[80vh] w-full max-w-xl overflow-hidden rounded-2xl shadow-2xl"
+              className="relative max-h-[90vh] w-full max-w-xl overflow-hidden rounded-2xl shadow-2xl flex flex-col"
               style={{
                 backgroundColor: "rgba(255, 255, 255, 0.15)",
                 backdropFilter: "blur(20px)",
@@ -279,7 +279,7 @@ export function TeamSection() {
             >
               {/* Header */}
               <div
-                className="flex items-start justify-between px-6 py-4"
+                className="flex items-start justify-between px-6 py-4 flex-shrink-0"
                 style={{
                   borderBottom: "1px solid rgba(255, 255, 255, 0.3)",
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -320,17 +320,49 @@ export function TeamSection() {
 
               {/* Content */}
               <motion.div
-                className="max-h-[60vh] overflow-y-auto px-6 py-4"
+                className="overflow-y-auto px-6 py-6 flex-1 team-modal-scroll"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.15 }}
+                style={{
+                  overscrollBehavior: "contain",
+                }}
+                onWheel={(e) => {
+                  // Prevenir que el scroll se propague al body
+                  e.stopPropagation();
+                }}
               >
                 {renderProfileContent(selectedMember.fullProfile)}
               </motion.div>
+              
+              <style>{`
+                .team-modal-scroll {
+                  scrollbar-width: thin;
+                  scrollbar-color: rgba(246, 237, 227, 0.5) rgba(255, 255, 255, 0.1);
+                }
+                
+                .team-modal-scroll::-webkit-scrollbar {
+                  width: 8px;
+                }
+                
+                .team-modal-scroll::-webkit-scrollbar-track {
+                  background: rgba(255, 255, 255, 0.1);
+                  border-radius: 4px;
+                }
+                
+                .team-modal-scroll::-webkit-scrollbar-thumb {
+                  background: rgba(246, 237, 227, 0.5);
+                  border-radius: 4px;
+                }
+                
+                .team-modal-scroll::-webkit-scrollbar-thumb:hover {
+                  background: rgba(246, 237, 227, 0.7);
+                }
+              `}</style>
 
               {/* Footer */}
               <div
-                className="flex justify-end px-6 py-3"
+                className="flex justify-end px-6 py-3 flex-shrink-0"
                 style={{
                   borderTop: "1px solid rgba(255, 255, 255, 0.3)",
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
