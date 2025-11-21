@@ -39,11 +39,14 @@ export async function sendContactEmail({ data }: SendContactEmailParams): Promis
           'migratorio': 'Derecho Migratorio',
           'otro': 'Otro',
         };
-        return `<li style="margin: 5px 0;">${serviceNames[service] || service}</li>`;
+        return `<li style="padding: 8px 0; padding-left: 24px; position: relative; font-size: 15px; color: #333333;">
+          <span style="position: absolute; left: 0; color: #57462f;">•</span>
+          ${serviceNames[service] || service}
+        </li>`;
       })
       .join('');
 
-    // Create HTML email content
+    // Create HTML email content using site colors
     const htmlContent = `
       <!DOCTYPE html>
       <html>
@@ -51,53 +54,71 @@ export async function sendContactEmail({ data }: SendContactEmailParams): Promis
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #171b0b 0%, #57462f 100%); color: #F6EDE3; padding: 30px; border-radius: 10px 10px 0 0;">
-            <h1 style="margin: 0; font-size: 24px;">Nuevo Mensaje de Contacto</h1>
-          </div>
-          
-          <div style="background: #ffffff; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-            <div style="margin-bottom: 25px;">
-              <h2 style="color: #57462f; margin: 0 0 15px 0; font-size: 18px; border-bottom: 2px solid #F6EDE3; padding-bottom: 10px;">
-                Información del Cliente
-              </h2>
-              <table style="width: 100%; border-collapse: collapse;">
-                <tr>
-                  <td style="padding: 10px 0; font-weight: 600; color: #57462f; width: 30%;">Nombre:</td>
-                  <td style="padding: 10px 0;">${data.name}</td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px 0; font-weight: 600; color: #57462f;">Email:</td>
-                  <td style="padding: 10px 0;"><a href="mailto:${data.email}" style="color: #57462f;">${data.email}</a></td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px 0; font-weight: 600; color: #57462f;">Teléfono:</td>
-                  <td style="padding: 10px 0;"><a href="tel:${data.phone}" style="color: #57462f;">${data.phone}</a></td>
-                </tr>
-              </table>
+        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333333; background-color: #F6EDE3; margin: 0; padding: 20px;">
+          <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid #998B6D;">
+            <!-- Header -->
+            <div style="background-color: #57462f; color: #F6EDE3; padding: 40px 30px; text-align: center;">
+              <h1 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.5px; color: #F6EDE3;">Nuevo Mensaje de Contacto</h1>
+              <p style="margin: 10px 0 0 0; font-size: 14px; color: #F6EDE3; opacity: 0.9;">MIT Consultores</p>
             </div>
-
-            <div style="margin-bottom: 25px;">
-              <h2 style="color: #57462f; margin: 0 0 15px 0; font-size: 18px; border-bottom: 2px solid #F6EDE3; padding-bottom: 10px;">
-                Servicios de Interés
-              </h2>
-              <ul style="margin: 0; padding-left: 20px; color: #333;">
-                ${servicesList}
-              </ul>
-            </div>
-
-            <div style="margin-bottom: 25px;">
-              <h2 style="color: #57462f; margin: 0 0 15px 0; font-size: 18px; border-bottom: 2px solid #F6EDE3; padding-bottom: 10px;">
-                Mensaje
-              </h2>
-              <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 4px solid #57462f; white-space: pre-wrap;">
-${data.message}
+            
+            <!-- Content -->
+            <div style="padding: 40px 30px; background-color: #ffffff;">
+              <!-- Información del Cliente -->
+              <div style="margin-bottom: 35px;">
+                <h2 style="color: #57462f; margin: 0 0 20px 0; font-size: 20px; font-weight: 600; padding-bottom: 12px; border-bottom: 2px solid #998B6D;">
+                  Información del Cliente
+                </h2>
+                <table style="width: 100%; border-collapse: collapse;">
+                  <tr>
+                    <td style="padding: 12px 0; font-weight: 600; color: #57462f; width: 35%; vertical-align: top;">Nombre:</td>
+                    <td style="padding: 12px 0; color: #333333; font-size: 15px;">${data.name}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 0; font-weight: 600; color: #57462f; vertical-align: top;">Email:</td>
+                    <td style="padding: 12px 0;">
+                      <a href="mailto:${data.email}" style="color: #57462f; text-decoration: none; font-size: 15px;">${data.email}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 0; font-weight: 600; color: #57462f; vertical-align: top;">Teléfono:</td>
+                    <td style="padding: 12px 0;">
+                      <a href="tel:${data.phonePrefix}${data.phone}" style="color: #57462f; text-decoration: none; font-size: 15px;">${data.phonePrefix} ${data.phone}</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
-            </div>
 
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #999; font-size: 12px;">
-              <p style="margin: 0;">Este mensaje fue enviado desde el formulario de contacto de MIT Consultores</p>
-              <p style="margin: 5px 0 0 0;">Fecha: ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })}</p>
+              <!-- Servicios de Interés -->
+              <div style="margin-bottom: 35px;">
+                <h2 style="color: #57462f; margin: 0 0 20px 0; font-size: 20px; font-weight: 600; padding-bottom: 12px; border-bottom: 2px solid #998B6D;">
+                  Servicios de Interés
+                </h2>
+                <ul style="margin: 0; padding-left: 0; list-style: none; color: #333333;">
+                  ${servicesList}
+                </ul>
+              </div>
+
+              <!-- Mensaje -->
+              <div style="margin-bottom: 35px;">
+                <h2 style="color: #57462f; margin: 0 0 20px 0; font-size: 20px; font-weight: 600; padding-bottom: 12px; border-bottom: 2px solid #998B6D;">
+                  Mensaje
+                </h2>
+                <div style="background-color: #F6EDE3; padding: 20px; border-radius: 6px; border-left: 4px solid #57462f; white-space: pre-wrap; color: #333333; font-size: 15px; line-height: 1.7;">
+${data.message}
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div style="margin-top: 40px; padding-top: 25px; border-top: 1px solid #998B6D; text-align: center;">
+                <p style="margin: 0; color: #998B6D; font-size: 13px; line-height: 1.6;">
+                  Este mensaje fue enviado desde el formulario de contacto de<br>
+                  <strong style="color: #57462f;">MIT Consultores</strong>
+                </p>
+                <p style="margin: 8px 0 0 0; color: #998B6D; font-size: 12px;">
+                  ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City', dateStyle: 'long', timeStyle: 'short' })}
+                </p>
+              </div>
             </div>
           </div>
         </body>
@@ -112,7 +133,7 @@ INFORMACIÓN DEL CLIENTE
 =======================
 Nombre: ${data.name}
 Email: ${data.email}
-Teléfono: ${data.phone}
+Teléfono: ${data.phonePrefix} ${data.phone}
 
 SERVICIOS DE INTERÉS
 ====================

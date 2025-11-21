@@ -1,7 +1,7 @@
 import { Form, useActionData, useNavigation } from "react-router";
 import { Button } from "~/ui/button";
 import { FAQ } from "~/components/contacto";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export function Contact() {
   const actionData = useActionData<{
@@ -13,17 +13,6 @@ export function Contact() {
   const isSubmitting = navigation.state === "submitting";
   
   const [formTimestamp] = useState(() => Date.now());
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  // Show success message and reset after successful submission
-  useEffect(() => {
-    if (actionData?.success) {
-      setShowSuccess(true);
-      // Hide success message after 5 seconds
-      const timer = setTimeout(() => setShowSuccess(false), 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [actionData]);
 
   return (
     <section className="bg-[#57462f]">
@@ -54,18 +43,6 @@ export function Contact() {
       {/* Content Section */}
       <section className="py-32 bg-[#f6EDE3]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Success Message */}
-          {showSuccess && actionData?.success && (
-            <div className="mb-6 bg-green-50 border border-green-200 text-green-800 px-6 py-4 rounded-lg shadow-md animate-fade-in">
-              <div className="flex items-center">
-                <svg className="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="font-medium">{actionData.message}</span>
-              </div>
-            </div>
-          )}
-
           {/* Error Message */}
           {actionData?.errors?._form && (
             <div className="mb-6 bg-red-50 border border-red-200 text-red-800 px-6 py-4 rounded-lg shadow-md">
@@ -132,15 +109,43 @@ export function Contact() {
                 <label htmlFor="phone" className="block text-sm font-medium text-[#F6EDE3] mb-2">
                   Teléfono
                 </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  disabled={isSubmitting}
-                  className={`w-full px-4 py-3 bg-white/10 border ${actionData?.errors?.phone ? 'border-red-400' : 'border-[#998B6D]'} rounded-lg focus:ring-2 focus:ring-[#F6EDE3] focus:border-transparent outline-none transition-all text-white placeholder:text-gray-300 disabled:opacity-50`}
-                  placeholder="55 1234 5678"
-                />
+                <div className="flex gap-2">
+                  <select
+                    name="phonePrefix"
+                    id="phonePrefix"
+                    disabled={isSubmitting}
+                    className="w-32 px-3 py-3 bg-white/10 border border-[#998B6D] rounded-lg focus:ring-2 focus:ring-[#F6EDE3] focus:border-transparent outline-none transition-all text-white disabled:opacity-50 appearance-none cursor-pointer"
+                    style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23F6EDE3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E\")", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 0.5rem center', backgroundSize: '1.5em 1.5em', paddingRight: '2.5rem' }}
+                    defaultValue="+52"
+                  >
+                    <option value="+52" className="bg-[#171b0b] text-white">🇲🇽 +52</option>
+                    <option value="+1" className="bg-[#171b0b] text-white">🇺🇸 +1</option>
+                    <option value="+34" className="bg-[#171b0b] text-white">🇪🇸 +34</option>
+                    <option value="+54" className="bg-[#171b0b] text-white">🇦🇷 +54</option>
+                    <option value="+55" className="bg-[#171b0b] text-white">🇧🇷 +55</option>
+                    <option value="+33" className="bg-[#171b0b] text-white">🇫🇷 +33</option>
+                    <option value="+49" className="bg-[#171b0b] text-white">🇩🇪 +49</option>
+                    <option value="+44" className="bg-[#171b0b] text-white">🇬🇧 +44</option>
+                    <option value="+39" className="bg-[#171b0b] text-white">🇮🇹 +39</option>
+                    <option value="+86" className="bg-[#171b0b] text-white">🇨🇳 +86</option>
+                  </select>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    disabled={isSubmitting}
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    maxLength={10}
+                    onInput={(e) => {
+                      // Solo permite números y limita a 10 dígitos
+                      e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '').slice(0, 10);
+                    }}
+                    className={`flex-1 px-4 py-3 bg-white/10 border ${actionData?.errors?.phone ? 'border-red-400' : 'border-[#998B6D]'} rounded-lg focus:ring-2 focus:ring-[#F6EDE3] focus:border-transparent outline-none transition-all text-white placeholder:text-gray-300 disabled:opacity-50`}
+                    placeholder="5512345678"
+                  />
+                </div>
                 {actionData?.errors?.phone && (
                   <p className="mt-1 text-sm text-red-300">{actionData.errors.phone}</p>
                 )}
@@ -218,14 +223,28 @@ export function Contact() {
                 )}
               </div>
 
-              <Button 
-                type="submit" 
-                variant="primary" 
-                className="w-full disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
-              </Button>
+              <div className="space-y-3">
+                <Button 
+                  type="submit" 
+                  variant="primary" 
+                  className="w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Enviando...' : actionData?.success ? '✓ Mensaje Enviado' : 'Enviar Mensaje'}
+                </Button>
+                
+                {/* Success Message */}
+                {actionData?.success && (
+                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 text-green-800 px-6 py-4 rounded-lg shadow-md">
+                    <div className="flex items-center">
+                      <svg className="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <p className="font-medium">{actionData.message}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </Form>
           </div>
         </div>

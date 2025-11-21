@@ -19,13 +19,20 @@ export function isValidEmail(email: string): boolean {
 }
 
 /**
- * Validates phone number (basic validation for Mexican format)
+ * Validates phone number (only digits, exactly 10 digits)
  */
 export function isValidPhone(phone: string): boolean {
-  // Remove spaces, dashes, and parentheses
-  const cleaned = phone.replace(/[\s\-()]/g, '');
-  // Allow 10-15 digits
-  return /^\d{10,15}$/.test(cleaned);
+  // Only allow digits
+  const cleaned = phone.replace(/[^0-9]/g, '');
+  // Must be exactly 10 digits (prefix is separate)
+  return /^\d{10}$/.test(cleaned);
+}
+
+/**
+ * Sanitizes phone number to only contain digits
+ */
+export function sanitizePhone(phone: string): string {
+  return phone.replace(/[^0-9]/g, '');
 }
 
 /**
@@ -51,6 +58,7 @@ export interface ContactFormData {
   name: string;
   email: string;
   phone: string;
+  phonePrefix: string;
   services: string[];
   message: string;
 }
@@ -67,7 +75,9 @@ export function validateContactForm(formData: FormData): ValidationResult {
   // Extract and sanitize data
   const name = sanitizeString(formData.get('name')?.toString() || '');
   const email = sanitizeString(formData.get('email')?.toString() || '');
-  const phone = sanitizeString(formData.get('phone')?.toString() || '');
+  const phoneRaw = formData.get('phone')?.toString() || '';
+  const phone = sanitizePhone(phoneRaw); // Only digits
+  const phonePrefix = formData.get('phonePrefix')?.toString() || '+52'; // Default to Mexico
   const message = sanitizeString(formData.get('message')?.toString() || '');
   const services = formData.getAll('services').map(s => sanitizeString(s.toString()));
 
@@ -81,9 +91,9 @@ export function validateContactForm(formData: FormData): ValidationResult {
     errors.email = 'Por favor ingresa un correo electrónico válido';
   }
 
-  // Validate phone
+  // Validate phone (only digits, exactly 10 digits)
   if (!isValidPhone(phone)) {
-    errors.phone = 'Por favor ingresa un número de teléfono válido';
+    errors.phone = 'Por favor ingresa un número de teléfono válido (10 dígitos)';
   }
 
   // Validate services
@@ -108,6 +118,7 @@ export function validateContactForm(formData: FormData): ValidationResult {
       name,
       email,
       phone,
+      phonePrefix,
       services: validServices,
       message,
     },
