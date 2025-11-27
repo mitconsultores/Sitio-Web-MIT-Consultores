@@ -16,9 +16,10 @@ const services: ServiceCard[] = [
   },
   {
     icon: <FaLightbulb className="size-8" />,
-    title: "Patentes",
+    title: "Elaboración de Contratos y Due Diligence",
     items: [
-      "Gestión y registro de patentes para proteger sus invenciones e innovaciones tecnológicas."
+      "Elaboración y revisión de contratos",
+      "Due diligence: revisión y regulación legal para identificar riesgos"
     ]
   },
   {
@@ -26,13 +27,6 @@ const services: ServiceCard[] = [
     title: "Derechos de Autor",
     items: [
       "Protección de obras literarias, artísticas, software y contenido digital mediante el registro de derechos de autor."
-    ]
-  },
-  {
-    icon: <FaLaptop className="size-8" />,
-    title: "Asesoría en Tecnología",
-    items: [
-      "Consultoría legal especializada en contratos tecnológicos, licenciamiento de software, protección de datos y cumplimiento normativo en el sector tecnológico."
     ]
   }
 ];
@@ -46,11 +40,11 @@ export function CardsPropiedadIntelectual() {
             Protección de Propiedad Intelectual
           </h2>
           <p className="text-lg text-[#666472] max-w-3xl mx-auto">
-            Soluciones completas para proteger y gestionar su propiedad intelectual en el entorno digital y empresarial moderno
+            Soluciones completas para proteger y gestionar su propiedad intelectual en el entorno empresarial
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
