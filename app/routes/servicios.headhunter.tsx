@@ -1,4 +1,4 @@
-import { HeroHeadhunter, CardsHeadhunter, ContentHeadhunter, CtaHeadhunter } from "~/components/servicios";
+import { HeroHeadhunter, CardsHeadhunter, CtaHeadhunter } from "~/components/servicios";
 
 export function meta() {
   return [
@@ -12,7 +12,6 @@ export default function HeadhunterPage() {
     <div>
       <HeroHeadhunter />
       <CardsHeadhunter />
-      <ContentHeadhunter />
       <CtaHeadhunter />
     </div>
   );

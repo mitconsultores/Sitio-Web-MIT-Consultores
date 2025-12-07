@@ -12,7 +12,7 @@ export function HeroHeadhunter() {
           Servicio de Head Hunter
         </h1>
         <p className="text-xl md:text-2xl text-[#E8DCC8] mb-8 leading-relaxed">
-          Búsqueda especializada del talento idóneo para las necesidades de su empresa
+          Búsqueda especializada del talento idóneo para las necesidades de su empresa.
         </p>
       </div>
     </section>

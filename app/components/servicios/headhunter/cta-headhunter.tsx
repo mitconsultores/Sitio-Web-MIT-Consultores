@@ -10,7 +10,7 @@ export function CtaHeadhunter() {
           ¿Necesita nuestro servicio?
         </h2>
         <p className="text-lg text-[#E8DCC8] mb-8 max-w-2xl mx-auto">
-          Ponte en contacto con nuestros especialistas en búsqueda de talento
+          Ponte en contacto con nosotros para más información.
         </p>
         <button
           onClick={() => navigate("/contacto")}

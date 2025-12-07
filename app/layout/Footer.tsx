@@ -247,7 +247,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-[#F6EDE3]">Contacto</h3>
             <Button href="/contacto" variant="secondary" className="bg-[#f6EDE3] text-[#57462f] hover:bg-[#57462f]/80">
-              Contactanos
+              Contáctanos
             </Button>
           </div>
         </div>

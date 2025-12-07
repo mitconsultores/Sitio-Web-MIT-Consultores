@@ -11,7 +11,7 @@ const services: ServiceCard[] = [
     icon: <FaUser className="size-8" />,
     title: "Servicio de Head Hunter",
     items: [
-      "Contamos con un especialista que podrá buscar el perfil idóneo para las necesidades de las empresas",
+      "Contamos con un especialista que podrá buscar el perfil idóneo para las necesidades de las empresas.",
       "Elaboración de estudios de mercado para determinar las remuneraciones, contrataciones, etc."
     ]
   }
@@ -26,7 +26,7 @@ export function CardsHeadhunter() {
             Servicio de Head Hunter
           </h2>
           <p className="text-lg text-[#666472] max-w-3xl mx-auto">
-            Soluciones integrales en búsqueda y reclutamiento de talento
+            Soluciones integrales en búsqueda y reclutamiento de talento.
           </p>
         </div>
 

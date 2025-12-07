@@ -18,7 +18,7 @@ export function HeroMigratorio() {
           DERECHO MIGRATORIO
         </h1>
         <p className="text-xl md:text-2xl text-[#F6EDE3] max-w-4xl leading-relaxed">
-          Asesoría integral en trámites migratorios para personas y empresas
+          Asesoría integral en trámites migratorios para personas y empresas.
         </p>
       </div>
     </section>

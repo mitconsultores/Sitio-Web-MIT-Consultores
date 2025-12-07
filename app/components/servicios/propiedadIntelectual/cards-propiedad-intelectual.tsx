@@ -18,8 +18,8 @@ const services: ServiceCard[] = [
     icon: <FaLightbulb className="size-8" />,
     title: "Elaboración de Contratos y Due Diligence",
     items: [
-      "Elaboración y revisión de contratos",
-      "Due diligence: revisión y regulación legal para identificar riesgos"
+      "Elaboración y revisión de contratos.",
+      "Due diligence: revisión y regulación legal para identificar riesgos.",
     ]
   },
   {
@@ -40,7 +40,7 @@ export function CardsPropiedadIntelectual() {
             Protección de Propiedad Intelectual
           </h2>
           <p className="text-lg text-[#666472] max-w-3xl mx-auto">
-            Soluciones completas para proteger y gestionar su propiedad intelectual en el entorno empresarial
+            Soluciones completas para proteger y gestionar su propiedad intelectual en el entorno empresarial.
           </p>
         </div>
 

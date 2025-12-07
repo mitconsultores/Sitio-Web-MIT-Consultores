@@ -18,7 +18,7 @@ export function AboutHero() {
           Un Despacho en el Corazón de la Ciudad de México
         </h1>
         <p className="text-xl md:text-2xl text-[#F6EDE3] max-w-4xl leading-relaxed">
-          Especializados en derecho corporativo, migratorio y propiedad intelectual
+          Especializados en derecho corporativo, migratorio y propiedad intelectual.
         </p>
       </div>
     </section>

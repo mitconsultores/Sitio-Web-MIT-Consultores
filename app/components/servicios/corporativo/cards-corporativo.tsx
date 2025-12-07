@@ -11,16 +11,16 @@ const services: ServiceCard[] = [
     icon: <FaBuilding className="size-8" />,
     title: "Constitución y Estructura Empresarial",
     items: [
-      "Constitución de sociedades y diseño legal de las mismas",
-      "Diseño corporativo: Diseño de la mejor estructura societaria de acuerdo al propósito y necesidades del cliente, fusiones, escisiones, transformaciones, etc"
+      "Constitución de sociedades y diseño legal de las mismas.",
+      "Diseño corporativo: Diseño de la mejor estructura societaria de acuerdo al propósito y necesidades del cliente, fusiones, escisiones, transformaciones, etc."
     ]
   },
   {
     icon: <FaGavel className="size-8" />,
     title: "Gobernanza y Gobierno Corporativo",
     items: [
-      "Gobierno corporativo: implementación de órganos de gobierno (junta, consejos), elaboración y modificación de estatutos, poderes, reglamentos internos, auditoría y cumplimiento",
-      "Elaboración de Actas, RUAS, convenios de accionistas, estatutos sociales de sociedades con diversas naturalezas jurídicas, mantenimiento de libros corporativos, entre otras cosas",
+      "Gobierno corporativo: implementación de órganos de gobierno (junta, consejos), elaboración y modificación de estatutos, poderes, reglamentos internos, auditoría y cumplimiento.",
+      "Elaboración de Actas, RUAS, convenios de accionistas, estatutos sociales de sociedades con diversas naturalezas jurídicas, mantenimiento de libros corporativos, entre otras cosas.",
       "Elaboración y revisión de contratos",
       "Diseño de estructuras jurídicas para la solución de conflictos o para la realización de negocios específicos: acompañamiento en negociaciones, disputas contractuales y cumplimiento legal."
     ]
@@ -29,21 +29,21 @@ const services: ServiceCard[] = [
     icon: <FaHandshake className="size-8" />,
     title: "Due Diligence y Fusiones/Adquisiciones (M&A)",
     items: [
-      "Due diligence: revisión y regulación legal de empresas, proyectos y/o transacciones para identificar riesgos legales"
+      "Due diligence: revisión y regulación legal de empresas, proyectos y/o transacciones para identificar riesgos legales.",
     ]
   },
   {
     icon: <FaShieldAlt className="size-8" />,
     title: "Regulación y Cumplimiento Legal (Compliance)",
     items: [
-      "Compliance corporativo: implementación de políticas internas, documentos jurídicos y todo lo necesario de acuerdo  a la naturaleza jurídica de la sociedad para dar cumplimiento normativo",
+      "Compliance corporativo: implementación de políticas internas, documentos jurídicos y todo lo necesario de acuerdo  a la naturaleza jurídica de la sociedad para dar cumplimiento normativo.",
     ]
   },
   {
     icon: <FaUsers className="size-8" />,
     title: "Asesoría en Asuntos Laborales",
     items: [
-      "Asesoría en asuntos laborales",
+      "Asesoría en asuntos laborales.",
       "Elaboración de contratos, políticas laborales, y asesorías en derecho laboral."
     ]
   }
@@ -58,7 +58,7 @@ export function CardsCorporativo() {
             Áreas de Especialización
           </h2>
           <p className="text-lg text-[#666472] max-w-3xl mx-auto">
-            Soluciones integrales en derecho corporativo adaptadas a las necesidades de su empresa
+            Soluciones integrales en derecho corporativo adaptadas a las necesidades de su empresa.
           </p>
         </div>
 

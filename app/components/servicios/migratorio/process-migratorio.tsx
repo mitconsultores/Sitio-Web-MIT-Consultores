@@ -15,19 +15,19 @@ const STEPS: Step[] = [
     id: 1,
     title: "Consulta Inicial",
     description:
-      "Evaluamos su situación y determinamos el mejor camino a seguir",
+      "Evaluamos su situación y determinamos el mejor camino a seguir.",
   },
   {
     id: 2,
     title: "Gestión de Trámites",
     description:
-      "Preparamos y presentamos toda la documentación necesaria ante el INM",
+      "Preparamos y presentamos toda la documentación necesaria ante el INM.",
   },
   {
     id: 3,
     title: "Seguimiento",
     description:
-      "Acompañamiento hasta la obtención de su permiso o residencia",
+      "Acompañamiento hasta la obtención de su permiso o residencia.",
   },
 ];
 

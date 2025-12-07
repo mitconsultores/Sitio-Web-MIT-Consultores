@@ -11,27 +11,27 @@ const services: ServiceCard[] = [
     icon: <FaBriefcase className="size-8" />,
     title: "Constancia de Empleador y Oferta de Trabajo",
     items: [
-      "Obtención de la Constancia de Inscripción de Empleador para compañías que desean contratar extranjeros",
-      "Gestión de documentación, presentación ante el INM y seguimiento hasta la emisión del permiso correspondiente",
-      "Redacción de cartas de oferta laboral para iniciar trámites de trabajo"
+      "Obtención de la Constancia de Inscripción de Empleador para compañías que desean contratar extranjeros.",
+      "Gestión de documentación, presentación ante el INM y seguimiento hasta la emisión del permiso correspondiente.",
+      "Redacción de cartas de oferta laboral para iniciar trámites de trabajo.",
     ]
   },
   {
     icon: <FaPassport className="size-8" />,
     title: "Visas y Residencias",
     items: [
-      "Gestión de visas por oferta de empleo, residencia temporal y permanente",
-      "Asesoría desde el consulado hasta la expedición de la tarjeta de residencia",
-      "Permisos especiales: nómada digital, inversionista, estudiante, familiar y jubilado"
+      "Gestión de visas por oferta de empleo, residencia temporal y permanente.",
+      "Asesoría desde el consulado hasta la expedición de la tarjeta de residencia.",
+      "Permisos especiales: nómada digital, inversionista, estudiante, familiar y jubilado.",
     ]
   },
   {
     icon: <FaExchangeAlt className="size-8" />,
     title: "Canje, Renovación y Reposición de Documentos",
     items: [
-      "Trámites de canje de FM/RM",
-      "Renovación de tarjetas de residencia",
-      "Reposición por pérdida o robo"
+      "Trámites de canje de FM/RM.",
+      "Renovación de tarjetas de residencia.",
+      "Reposición por pérdida o robo.",
     ]
   },
   {
@@ -39,32 +39,32 @@ const services: ServiceCard[] = [
     title: "Cambios y Actualizaciones ante el INM",
     items: [
       "Modificación de condición o calidad migratoria (ej: visitante → residente temporal)",
-      "Cambios de empleador, domicilio, actividades, estado civil o nacionalidad"
+      "Cambios de empleador, domicilio, actividades, estado civil o nacionalidad.",
     ]
   },
   {
     icon: <FaCheckCircle className="size-8" />,
     title: "Regularización Migratoria",
     items: [
-      "Procesos para regularizar situación por estancia irregular",
-      "Vencimiento de documentos o actividades no autorizadas"
+      "Procesos para regularizar situación por estancia irregular.",
+      "Vencimiento de documentos o actividades no autorizadas.",
     ]
   },
   {
     icon: <FaFlag className="size-8" />,
     title: "Nacionalidad y Naturalización",
     items: [
-      "Asistencia para la obtención de la naturalización mexicana",
-      "Por residencia, matrimonio o vínculo familiar",
-      "Inscripción de documentos extranjeros"
+      "Asistencia para la obtención de la naturalización mexicana.",
+      "Por residencia, matrimonio o vínculo familiar.",
+      "Inscripción de documentos extranjeros.",
     ]
   },
   {
     icon: <FaSearch className="size-8" />,
     title: "Auditorías y Cumplimiento Corporativo",
     items: [
-      "Revisión interna de la situación migratoria de empleados extranjeros",
-      "Procurar cumplimiento normativo y prevenir sanciones"
+      "Revisión interna de la situación migratoria de empleados extranjeros.",
+      "Procurar cumplimiento normativo y prevenir sanciones.",
     ]
   }
 ];
@@ -78,7 +78,7 @@ export function CardsMigratorio() {
             Servicios Migratorios
           </h2>
           <p className="text-lg text-[#666472] max-w-3xl mx-auto">
-            Acompañamiento completo en todos sus trámites ante el Instituto Nacional de Migración
+            Acompañamiento completo en todos sus trámites ante el Instituto Nacional de Migración.
           </p>
         </div>
 

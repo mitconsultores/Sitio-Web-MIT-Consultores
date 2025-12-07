@@ -8,7 +8,7 @@ export function CTAMigratorio() {
           ¿Necesita asesoría migratoria?
         </h2>
         <p className="text-lg md:text-xl text-[#666472] mb-8 leading-relaxed max-w-2xl mx-auto">
-          Contáctenos para una evaluación de su caso y comience su trámite migratorio
+          Contáctenos para una evaluación de su caso y comience su trámite migratorio.
         </p>
         <div className="flex justify-center">
           <Button variant="primary" href="/contacto">

@@ -18,7 +18,7 @@ export function HeroPropiedadIntelectual() {
           PROPIEDAD INTELECTUAL
         </h1>
         <p className="text-xl md:text-2xl text-[#F6EDE3] max-w-4xl leading-relaxed">
-          Protección integral de sus activos intangibles y derechos de propiedad intelectual
+          Protección integral de sus activos intangibles y derechos de propiedad intelectual.
         </p>
       </div>
     </section>

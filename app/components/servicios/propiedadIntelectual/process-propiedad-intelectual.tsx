@@ -15,19 +15,19 @@ const STEPS: Step[] = [
     id: 1,
     title: "Protección Integral",
     description:
-      "Salvaguardamos todos sus activos intangibles con estrategias personalizadas",
+      "Salvaguardamos todos sus activos intangibles con estrategias personalizadas.",
   },
   {
     id: 2,
     title: "Experiencia Comprobada",
     description:
-      "Años de experiencia en registro y defensa de derechos de propiedad intelectual",
+      "Años de experiencia en registro y defensa de derechos de propiedad intelectual.",
   },
   {
     id: 3,
     title: "Asesoría Continua",
     description:
-      "Acompañamiento permanente en la gestión y renovación de sus derechos",
+      "Acompañamiento permanente en la gestión y renovación de sus derechos.",
   },
 ];
 

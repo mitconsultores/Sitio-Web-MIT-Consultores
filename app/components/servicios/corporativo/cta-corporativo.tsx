@@ -8,7 +8,7 @@ export function CTACorporativo() {
             ¿Necesita asesoría en derecho corporativo?
         </h2>
         <p className="text-lg md:text-xl text-[#666472] mb-8 leading-relaxed max-w-2xl mx-auto">
-            Contáctenos para una consulta personalizada
+            Contáctenos para una consulta personalizada.
         </p>
         <div className="flex justify-center">
           <Button variant="primary" href="/contacto">

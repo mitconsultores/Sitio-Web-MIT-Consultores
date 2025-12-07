@@ -18,7 +18,7 @@ export function HeroCorporativo() {
           DERECHO CORPORATIVO
         </h1>
         <p className="text-xl md:text-2xl text-[#F6EDE3] max-w-4xl leading-relaxed">
-          Soluciones integrales para la estructura, gobierno y operación de su empresa
+          Soluciones integrales para la estructura, gobierno y operación de su empresa.
         </p>
       </div>
     </section>
