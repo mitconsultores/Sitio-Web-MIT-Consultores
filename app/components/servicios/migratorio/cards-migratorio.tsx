@@ -1,4 +1,4 @@
-import { FaBriefcase, FaPassport, FaExchangeAlt, FaEdit, FaCheckCircle, FaFlag, FaSearch, FaUser } from "react-icons/fa";
+import { FaBriefcase, FaPassport, FaExchangeAlt, FaEdit, FaCheckCircle, FaFlag, FaSearch } from "react-icons/fa";
 
 interface ServiceCard {
   icon: React.ReactNode;
@@ -66,14 +66,6 @@ const services: ServiceCard[] = [
       "Revisión interna de la situación migratoria de empleados extranjeros",
       "Procurar cumplimiento normativo y prevenir sanciones"
     ]
-  },
-  {
-    icon: <FaUser className="size-8" />,
-    title: "Servicio de Head Hunter",
-    items: [
-      "Contamos con un especialista que podrá buscar el perfil idóneo para las necesidades de las empresas",
-      "Elaboración de estudios de mercado para determinar las remuneraciones, contrataciones, etc."
-    ]
   }
 ];
 
@@ -90,81 +82,169 @@ export function CardsMigratorio() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Primeras 6 cards */}
-          {services.slice(0, 6).map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D]"
-            >
-              {/* Icon */}
-              <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
-                {service.icon}
-              </div>
-
-              {/* Title */}
-              <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
-                {service.title}
-              </h3>
-
-              {/* Gradient Line */}
-              <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
-
-              {/* Items */}
-              <ul className="space-y-4">
-                {service.items.map((item, itemIndex) => (
-                  <li
-                    key={itemIndex}
-                    className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
-                  >
-                    <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
-                      •
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Row 1 */}
+          <div className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D] md:col-span-2">
+            <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[0].icon}
             </div>
-          ))}
-
-          {/* Últimas 2 cards en la misma fila */}
-          <div className="lg:col-span-3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {services.slice(6).map((service, index) => (
-                <div
-                  key={index + 6}
-                  className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D]"
+            <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[0].title}
+            </h3>
+            <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
+            <ul className="space-y-4">
+              {services[0].items.map((item, itemIndex) => (
+                <li 
+                  key={itemIndex}
+                  className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
                 >
-                  {/* Icon */}
-                  <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
-                    {service.icon}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
-                    {service.title}
-                  </h3>
-
-                  {/* Gradient Line */}
-                  <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
-
-                  {/* Items */}
-                  <ul className="space-y-4">
-                    {service.items.map((item, itemIndex) => (
-                      <li
-                        key={itemIndex}
-                        className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
-                      >
-                        <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
-                          •
-                        </span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
+                    •
+                  </span>
+                  <span>{item}</span>
+                </li>
               ))}
+            </ul>
+          </div>
+
+          <div className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D]">
+            <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[1].icon}
             </div>
+            <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[1].title}
+            </h3>
+            <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
+            <ul className="space-y-4">
+              {services[1].items.map((item, itemIndex) => (
+                <li 
+                  key={itemIndex}
+                  className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
+                >
+                  <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
+                    •
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Row 2 */}
+          <div className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D]">
+            <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[2].icon}
+            </div>
+            <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[2].title}
+            </h3>
+            <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
+            <ul className="space-y-4">
+              {services[2].items.map((item, itemIndex) => (
+                <li 
+                  key={itemIndex}
+                  className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
+                >
+                  <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
+                    •
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D]">
+            <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[3].icon}
+            </div>
+            <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[3].title}
+            </h3>
+            <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
+            <ul className="space-y-4">
+              {services[3].items.map((item, itemIndex) => (
+                <li 
+                  key={itemIndex}
+                  className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
+                >
+                  <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
+                    •
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D]">
+            <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[4].icon}
+            </div>
+            <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[4].title}
+            </h3>
+            <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
+            <ul className="space-y-4">
+              {services[4].items.map((item, itemIndex) => (
+                <li 
+                  key={itemIndex}
+                  className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
+                >
+                  <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
+                    •
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Row 3 */}
+          <div className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D] md:col-span-2">
+            <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[5].icon}
+            </div>
+            <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[5].title}
+            </h3>
+            <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
+            <ul className="space-y-4">
+              {services[5].items.map((item, itemIndex) => (
+                <li 
+                  key={itemIndex}
+                  className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
+                >
+                  <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
+                    •
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="group bg-white rounded-xl border border-[#F6EDE3] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:border-[#998B6D]">
+            <div className="flex justify-center mb-4 text-[#57512F] group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[6].icon}
+            </div>
+            <h3 className="text-xl font-bold text-[#57512F] text-center mb-4 group-hover:text-[#998B6D] transition-colors duration-300">
+              {services[6].title}
+            </h3>
+            <div className="h-[1px] mb-6 rounded-full bg-gradient-to-r from-transparent via-[#57512F] to-transparent group-hover:via-[#998B6D] transition-all duration-300" />
+            <ul className="space-y-4">
+              {services[6].items.map((item, itemIndex) => (
+                <li 
+                  key={itemIndex}
+                  className="flex items-start gap-3 text-[#666472] text-sm leading-relaxed"
+                >
+                  <span className="text-[#57512F] mt-1 flex-shrink-0 group-hover:text-[#998B6D] transition-colors duration-300">
+                    •
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

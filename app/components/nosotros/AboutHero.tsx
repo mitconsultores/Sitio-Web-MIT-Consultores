@@ -15,7 +15,7 @@ export function AboutHero() {
       {/* Content */}
       <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Un Distinguido Despacho Jurídico en el Corazón de la Ciudad de México
+          Un Despacho en el Corazón de la Ciudad de México
         </h1>
         <p className="text-xl md:text-2xl text-[#F6EDE3] max-w-4xl leading-relaxed">
           Especializados en derecho corporativo, migratorio y propiedad intelectual

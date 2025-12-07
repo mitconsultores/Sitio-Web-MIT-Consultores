@@ -6,5 +6,6 @@ export default [
     route("servicios/corporativo", "routes/servicios.corporativo.tsx"),
     route("servicios/propiedad-intelectual", "routes/servicios.propiedad-intelectual.tsx"),
     route("servicios/migratorio", "routes/servicios.migratorio.tsx"),
+    route("servicios/headhunter", "routes/servicios.headhunter.tsx"),
     route("contacto", "routes/contacto.tsx"),
 ] satisfies RouteConfig;

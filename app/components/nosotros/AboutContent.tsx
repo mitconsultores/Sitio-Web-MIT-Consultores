@@ -7,13 +7,13 @@ export function AboutContent() {
           {/* Left Side - Text */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#171b0b] mb-6 leading-tight">
-              Tu Socio Legal Estratégico
+              Tu Socio Legal
             </h2>
             <p className="text-lg text-[#666472] leading-relaxed mb-6 text-justify">
-              MIT Consultores es un distinguido despacho jurídico boutique ubicado en el corazón de la Ciudad de México. Especializado en derecho corporativo, migratorio y propiedad intelectual, brindamos a nuestros clientes servicios legales de primera calidad adaptados a sus necesidades específicas.
+              MIT Consultores es un despacho boutique ubicado en el corazón de la Ciudad de México. Especializado en derecho corporativo, migratorio y propiedad intelectual, brindamos a nuestros clientes servicios legales de primera calidad adaptados a sus necesidades específicas.
             </p>
             <p className="text-lg text-[#666472] leading-relaxed mb-6 text-justify">
-              Nuestro equipo de abogados altamente capacitados cuenta con años de experiencia en el mercado mexicano e internacional, lo que nos permite ofrecer soluciones legales integrales y estratégicas. Trabajamos de manera cercana con cada cliente, entendiendo sus objetivos empresariales y personales para proporcionar asesoría legal personalizada y efectiva.
+              Nuestro equipo de abogados altamente capacitados cuenta con años de experiencia en el mercado mexicano e internacional, lo que nos permite ofrecer soluciones legales integrales y estratégicas. Trabajamos de manera cercana con cada cliente, entendiendo sus objetivos para proporcionar asesoría legal personalizada y efectiva.
             </p>
             <p className="text-lg text-[#666472] leading-relaxed text-justify">
               En MIT Consultores, nos enorgullece mantener los más altos estándares de excelencia profesional. Nuestra dedicación a la calidad, integridad y resultados excepcionales nos ha posicionado como un referente en el sector legal mexicano, ganando la confianza de empresas multinacionales, emprendedores y profesionales que buscan servicios jurídicos de primer nivel.

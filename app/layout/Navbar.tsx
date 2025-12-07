@@ -123,6 +123,12 @@ export function Navbar() {
                 >
                   Derecho Migratorio
                 </Link>
+                <Link
+                  to="/servicios/headhunter"
+                  className="block px-4 py-3 text-[#f6EDE3] hover:text-[#998B6D] hover:bg-[#171b0b]/60 font-serif transition-colors duration-200"
+                >
+                  Head Hunter
+                </Link>
               </div>
             </div>
 
@@ -229,6 +235,13 @@ export function Navbar() {
                     onClick={() => setIsOpen(false)}
                   >
                     Derecho Migratorio
+                  </Link>
+                  <Link
+                    to="/servicios/headhunter"
+                    className="block py-2 text-[#666472] hover:text-[#57512F] font-serif transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Head Hunter
                   </Link>
                 </div>
               </div>
