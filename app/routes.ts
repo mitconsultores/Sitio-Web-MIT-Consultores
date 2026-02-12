@@ -8,4 +8,5 @@ export default [
     route("servicios/migratorio", "routes/servicios.migratorio.tsx"),
     route("servicios/headhunter", "routes/servicios.headhunter.tsx"),
     route("contacto", "routes/contacto.tsx"),
+    route("sitemap.xml", "routes/sitemap.xml.tsx"),
 ] satisfies RouteConfig;
